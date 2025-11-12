@@ -7,10 +7,7 @@
 #include "hardware/dma.h"
 #endif
 
-#define BUFFER_ROW_WIDTH_BYTES  (BSP_ST7306_SCREEN_WIDTH / 2)
-#define BUFFER_LOGIC_HEIGHT     (BSP_ST7306_SCREEN_HEIGHT / 2)
-#define BUFFER_SIZE             (BUFFER_ROW_WIDTH_BYTES * BUFFER_LOGIC_HEIGHT) // 30000
-static uint8_t screen_buffer[BUFFER_SIZE];
+uint8_t bsp_st7306_screen_buffer[BSP_ST7306_BUFFER_SIZE];
 
 #if BSP_ST7306_USE_DMA
 static int st7306_dma_channel;
@@ -228,23 +225,34 @@ void bsp_st7306_init() {
 }
 
 void bsp_st7306_drawpoint(uint16_t x, uint16_t y, uint16_t color) {
-    if (x >= BSP_ST7306_SCREEN_WIDTH || y >= BSP_ST7306_SCREEN_HEIGHT) {
+    if (x >= 300 || y >= 400) {
         return;
     }
     uint16_t byte_x = x / 2;
     uint16_t byte_y = y / 2;
-    uint32_t byte_index = byte_y * BUFFER_ROW_WIDTH_BYTES + byte_x;
+    uint32_t byte_index = byte_y * (300 / 2) + byte_x;
+    if (byte_index >= BSP_ST7306_BUFFER_SIZE) {
+        return;
+    }
+    uint8_t one_two = y % 2;
+    uint8_t line_bit_high = (x % 2) * 4;
+    uint8_t line_bit_low = line_bit_high + 2;
+    uint8_t write_bit_high_pos = 7 - (line_bit_high + one_two);
+    uint8_t write_bit_low_pos = 7 - (line_bit_low + one_two);
 
-    uint8_t sub_pixel_x = x % 2; // 0 for left, 1 for right
-    uint8_t sub_pixel_y = y % 2; // 0 for top, 1 for bottom
+    bool data_bit1 = (color & 0x02) >> 1;
+    bool data_bit0 = (color & 0x01);
 
-    uint8_t bit_pos = 7 - (sub_pixel_x * 1 + sub_pixel_y * 2);
-    bit_pos = 7 - (sub_pixel_y * 1 + sub_pixel_x * 2);
-
-    if (color == BSP_ST7306_COLOR_BLACK) {
-        screen_buffer[byte_index] |= (1 << bit_pos);
+    if (data_bit1) {
+        bsp_st7306_screen_buffer[byte_index] |= (1 << write_bit_high_pos);
     } else {
-        screen_buffer[byte_index] &= ~(1 << bit_pos);
+        bsp_st7306_screen_buffer[byte_index] &= ~(1 << write_bit_high_pos);
+    }
+
+    if (data_bit0) {
+        bsp_st7306_screen_buffer[byte_index] |= (1 << write_bit_low_pos);
+    } else {
+        bsp_st7306_screen_buffer[byte_index] &= ~(1 << write_bit_low_pos);
     }
 }
 
@@ -291,12 +299,12 @@ void bsp_st7306_update() {
             st7306_dma_channel,
             &st7306_dma_cfg,
             &spi_get_hw(spi_default)->dr, // write address spi data register
-            screen_buffer, // read addr st7306 frame buffer
-            BUFFER_SIZE, // word count
+            bsp_st7306_screen_buffer, // read addr st7306 frame buffer
+            BSP_ST7306_BUFFER_SIZE, // word count
             true
     );
 #else
-    spi_write_blocking(spi_default, screen_buffer, BUFFER_SIZE);
+    spi_write_blocking(spi_default, bsp_st7306_screen_buffer, BUFFER_SIZE);
     cs_deselect();
 #endif
 }
@@ -311,8 +319,8 @@ void bsp_st7306_wait_for_dma_finish() {
 
 void bsp_st7306_fill(uint16_t color) {
     if (color == BSP_ST7306_COLOR_BLACK) {
-        memset(screen_buffer, 0xFF, BUFFER_SIZE);
+        memset(bsp_st7306_screen_buffer, 0xFF, BSP_ST7306_BUFFER_SIZE);
     } else {
-        memset(screen_buffer, 0x00, BUFFER_SIZE);
+        memset(bsp_st7306_screen_buffer, 0x00, BSP_ST7306_BUFFER_SIZE);
     }
 }
