@@ -236,7 +236,7 @@ void setup_scr_screen(lv_ui *ui)
     lv_label_set_text(ui->screen_label_8, "未联网");
     lv_label_set_long_mode(ui->screen_label_8, LV_LABEL_LONG_WRAP);
     lv_obj_set_pos(ui->screen_label_8, 0, 0);
-    lv_obj_set_size(ui->screen_label_8, 49, 17);
+    lv_obj_set_size(ui->screen_label_8, 400, 17);
 
     //Write style for screen_label_8, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
     lv_obj_set_style_border_width(ui->screen_label_8, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
