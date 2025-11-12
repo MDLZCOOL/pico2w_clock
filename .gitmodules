@@ -2,3 +2,6 @@
 	path = src/lib/lvgl
 	url = https://github.com/lvgl/lvgl.git
 	branch = release/v8.3
+[submodule "src/lib/cJSON"]
+	path = src/lib/cJSON
+	url = https://github.com/DaveGamble/cJSON

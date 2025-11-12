@@ -1,7 +1,9 @@
 add_executable(${CMAKE_PROJECT_NAME})
 
 set(LV_CONF_PATH ${CMAKE_CURRENT_SOURCE_DIR}/configs/lvgl/lv_conf.h CACHE PATH "Path to lv_conf.h")
+
 add_subdirectory(lib/lvgl)
+add_subdirectory(lib/cJSON)
 
 target_sources(${CMAKE_PROJECT_NAME} PRIVATE
         main.c
@@ -18,6 +20,7 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
 )
 
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}/lib/cJSON
         ${CMAKE_CURRENT_SOURCE_DIR}/bsp
         ${CMAKE_CURRENT_SOURCE_DIR}/configs
         ${CMAKE_CURRENT_SOURCE_DIR}/configs/lvgl
@@ -29,7 +32,7 @@ target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
 )
 
 # pull in common dependencies
-target_link_libraries(${CMAKE_PROJECT_NAME} pico_stdlib hardware_spi hardware_dma pico_cyw43_arch_lwip_threadsafe_background lvgl::lvgl lvgl::demos)
+target_link_libraries(${CMAKE_PROJECT_NAME} pico_stdlib hardware_spi hardware_dma pico_cyw43_arch_lwip_threadsafe_background lvgl::lvgl lvgl::demos cjson)
 
 # set usb log output
 pico_enable_stdio_usb(${CMAKE_PROJECT_NAME} 1)
