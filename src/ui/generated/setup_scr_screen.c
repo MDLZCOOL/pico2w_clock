@@ -74,14 +74,14 @@ void setup_scr_screen(lv_ui *ui)
     ui->screen_label_1 = lv_label_create(ui->screen);
     lv_label_set_text(ui->screen_label_1, "00");
     lv_label_set_long_mode(ui->screen_label_1, LV_LABEL_LONG_WRAP);
-    lv_obj_set_pos(ui->screen_label_1, 59, 87);
-    lv_obj_set_size(ui->screen_label_1, 123, 120);
+    lv_obj_set_pos(ui->screen_label_1, 46, 74);
+    lv_obj_set_size(ui->screen_label_1, 143, 143);
 
     //Write style for screen_label_1, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
     lv_obj_set_style_border_width(ui->screen_label_1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_radius(ui->screen_label_1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_color(ui->screen_label_1, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(ui->screen_label_1, &lv_font_FX_LED_120, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->screen_label_1, &lv_font_FX_LED_140, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_opa(ui->screen_label_1, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_letter_space(ui->screen_label_1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_line_space(ui->screen_label_1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -97,14 +97,14 @@ void setup_scr_screen(lv_ui *ui)
     ui->screen_label_2 = lv_label_create(ui->screen);
     lv_label_set_text(ui->screen_label_2, ":");
     lv_label_set_long_mode(ui->screen_label_2, LV_LABEL_LONG_WRAP);
-    lv_obj_set_pos(ui->screen_label_2, 187, 87);
-    lv_obj_set_size(ui->screen_label_2, 27, 120);
+    lv_obj_set_pos(ui->screen_label_2, 187, 74);
+    lv_obj_set_size(ui->screen_label_2, 27, 143);
 
     //Write style for screen_label_2, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
     lv_obj_set_style_border_width(ui->screen_label_2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_radius(ui->screen_label_2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_color(ui->screen_label_2, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(ui->screen_label_2, &lv_font_FX_LED_120, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->screen_label_2, &lv_font_FX_LED_140, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_opa(ui->screen_label_2, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_letter_space(ui->screen_label_2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_line_space(ui->screen_label_2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -120,14 +120,14 @@ void setup_scr_screen(lv_ui *ui)
     ui->screen_label_3 = lv_label_create(ui->screen);
     lv_label_set_text(ui->screen_label_3, "00");
     lv_label_set_long_mode(ui->screen_label_3, LV_LABEL_LONG_WRAP);
-    lv_obj_set_pos(ui->screen_label_3, 219, 87);
-    lv_obj_set_size(ui->screen_label_3, 123, 120);
+    lv_obj_set_pos(ui->screen_label_3, 214, 74);
+    lv_obj_set_size(ui->screen_label_3, 143, 143);
 
     //Write style for screen_label_3, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
     lv_obj_set_style_border_width(ui->screen_label_3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_radius(ui->screen_label_3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_color(ui->screen_label_3, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(ui->screen_label_3, &lv_font_FX_LED_120, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->screen_label_3, &lv_font_FX_LED_140, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_opa(ui->screen_label_3, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_letter_space(ui->screen_label_3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_line_space(ui->screen_label_3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -144,13 +144,13 @@ void setup_scr_screen(lv_ui *ui)
     lv_label_set_text(ui->screen_label_4, "2025年11月11日 周二");
     lv_label_set_long_mode(ui->screen_label_4, LV_LABEL_LONG_WRAP);
     lv_obj_set_pos(ui->screen_label_4, 50, 230);
-    lv_obj_set_size(ui->screen_label_4, 150, 17);
+    lv_obj_set_size(ui->screen_label_4, 208, 25);
 
     //Write style for screen_label_4, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
     lv_obj_set_style_border_width(ui->screen_label_4, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_radius(ui->screen_label_4, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_color(ui->screen_label_4, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(ui->screen_label_4, &lv_font_SourceHanSerifSC_Regular_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->screen_label_4, &lv_font_SourceHanSerifSC_Regular_22, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_opa(ui->screen_label_4, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_letter_space(ui->screen_label_4, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_line_space(ui->screen_label_4, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -166,14 +166,14 @@ void setup_scr_screen(lv_ui *ui)
     ui->screen_label_5 = lv_label_create(ui->screen);
     lv_label_set_text(ui->screen_label_5, "农历九月廿二");
     lv_label_set_long_mode(ui->screen_label_5, LV_LABEL_LONG_WRAP);
-    lv_obj_set_pos(ui->screen_label_5, 50, 247);
-    lv_obj_set_size(ui->screen_label_5, 155, 17);
+    lv_obj_set_pos(ui->screen_label_5, 50, 255);
+    lv_obj_set_size(ui->screen_label_5, 155, 25);
 
     //Write style for screen_label_5, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
     lv_obj_set_style_border_width(ui->screen_label_5, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_radius(ui->screen_label_5, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_color(ui->screen_label_5, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(ui->screen_label_5, &lv_font_SourceHanSerifSC_Regular_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->screen_label_5, &lv_font_SourceHanSerifSC_Regular_22, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_opa(ui->screen_label_5, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_letter_space(ui->screen_label_5, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_line_space(ui->screen_label_5, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -187,16 +187,16 @@ void setup_scr_screen(lv_ui *ui)
 
     //Write codes screen_label_6
     ui->screen_label_6 = lv_label_create(ui->screen);
-    lv_label_set_text(ui->screen_label_6, "距 元旦 还有");
+    lv_label_set_text(ui->screen_label_6, "距 元旦");
     lv_label_set_long_mode(ui->screen_label_6, LV_LABEL_LONG_WRAP);
-    lv_obj_set_pos(ui->screen_label_6, 260, 230);
-    lv_obj_set_size(ui->screen_label_6, 89, 17);
+    lv_obj_set_pos(ui->screen_label_6, 258, 230);
+    lv_obj_set_size(ui->screen_label_6, 91, 25);
 
     //Write style for screen_label_6, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
     lv_obj_set_style_border_width(ui->screen_label_6, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_radius(ui->screen_label_6, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_color(ui->screen_label_6, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(ui->screen_label_6, &lv_font_SourceHanSerifSC_Regular_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->screen_label_6, &lv_font_SourceHanSerifSC_Regular_22, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_opa(ui->screen_label_6, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_letter_space(ui->screen_label_6, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_line_space(ui->screen_label_6, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -212,14 +212,14 @@ void setup_scr_screen(lv_ui *ui)
     ui->screen_label_7 = lv_label_create(ui->screen);
     lv_label_set_text(ui->screen_label_7, "100 天");
     lv_label_set_long_mode(ui->screen_label_7, LV_LABEL_LONG_WRAP);
-    lv_obj_set_pos(ui->screen_label_7, 259, 247);
-    lv_obj_set_size(ui->screen_label_7, 90, 17);
+    lv_obj_set_pos(ui->screen_label_7, 258, 255);
+    lv_obj_set_size(ui->screen_label_7, 90, 25);
 
     //Write style for screen_label_7, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
     lv_obj_set_style_border_width(ui->screen_label_7, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_radius(ui->screen_label_7, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_color(ui->screen_label_7, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(ui->screen_label_7, &lv_font_SourceHanSerifSC_Regular_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->screen_label_7, &lv_font_SourceHanSerifSC_Regular_22, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_opa(ui->screen_label_7, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_letter_space(ui->screen_label_7, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_line_space(ui->screen_label_7, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -236,13 +236,13 @@ void setup_scr_screen(lv_ui *ui)
     lv_label_set_text(ui->screen_label_8, "未联网");
     lv_label_set_long_mode(ui->screen_label_8, LV_LABEL_LONG_WRAP);
     lv_obj_set_pos(ui->screen_label_8, 0, 0);
-    lv_obj_set_size(ui->screen_label_8, 400, 17);
+    lv_obj_set_size(ui->screen_label_8, 400, 22);
 
     //Write style for screen_label_8, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
     lv_obj_set_style_border_width(ui->screen_label_8, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_radius(ui->screen_label_8, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_color(ui->screen_label_8, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(ui->screen_label_8, &lv_font_SourceHanSerifSC_Regular_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->screen_label_8, &lv_font_SourceHanSerifSC_Regular_22, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_opa(ui->screen_label_8, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_letter_space(ui->screen_label_8, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_line_space(ui->screen_label_8, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -258,14 +258,14 @@ void setup_scr_screen(lv_ui *ui)
     ui->screen_label_9 = lv_label_create(ui->screen);
     lv_label_set_text(ui->screen_label_9, "室外");
     lv_label_set_long_mode(ui->screen_label_9, LV_LABEL_LONG_WRAP);
-    lv_obj_set_pos(ui->screen_label_9, 50, 44);
-    lv_obj_set_size(ui->screen_label_9, 33, 17);
+    lv_obj_set_pos(ui->screen_label_9, 46, 36);
+    lv_obj_set_size(ui->screen_label_9, 45, 25);
 
     //Write style for screen_label_9, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
     lv_obj_set_style_border_width(ui->screen_label_9, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_radius(ui->screen_label_9, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_color(ui->screen_label_9, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(ui->screen_label_9, &lv_font_SourceHanSerifSC_Regular_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->screen_label_9, &lv_font_SourceHanSerifSC_Regular_22, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_opa(ui->screen_label_9, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_letter_space(ui->screen_label_9, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_line_space(ui->screen_label_9, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -281,18 +281,18 @@ void setup_scr_screen(lv_ui *ui)
     ui->screen_label_10 = lv_label_create(ui->screen);
     lv_label_set_text(ui->screen_label_10, "20℃/20%");
     lv_label_set_long_mode(ui->screen_label_10, LV_LABEL_LONG_WRAP);
-    lv_obj_set_pos(ui->screen_label_10, 88, 44);
-    lv_obj_set_size(ui->screen_label_10, 73, 17);
+    lv_obj_set_pos(ui->screen_label_10, 94, 36);
+    lv_obj_set_size(ui->screen_label_10, 100, 25);
 
     //Write style for screen_label_10, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
     lv_obj_set_style_border_width(ui->screen_label_10, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_radius(ui->screen_label_10, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_color(ui->screen_label_10, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(ui->screen_label_10, &lv_font_SourceHanSerifSC_Regular_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->screen_label_10, &lv_font_SourceHanSerifSC_Regular_22, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_opa(ui->screen_label_10, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_letter_space(ui->screen_label_10, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_line_space(ui->screen_label_10, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_align(ui->screen_label_10, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->screen_label_10, LV_TEXT_ALIGN_RIGHT, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_bg_opa(ui->screen_label_10, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_pad_top(ui->screen_label_10, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_pad_right(ui->screen_label_10, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -304,14 +304,14 @@ void setup_scr_screen(lv_ui *ui)
     ui->screen_label_11 = lv_label_create(ui->screen);
     lv_label_set_text(ui->screen_label_11, "多云");
     lv_label_set_long_mode(ui->screen_label_11, LV_LABEL_LONG_WRAP);
-    lv_obj_set_pos(ui->screen_label_11, 234, 44);
-    lv_obj_set_size(ui->screen_label_11, 33, 17);
+    lv_obj_set_pos(ui->screen_label_11, 200, 36);
+    lv_obj_set_size(ui->screen_label_11, 48, 25);
 
     //Write style for screen_label_11, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
     lv_obj_set_style_border_width(ui->screen_label_11, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_radius(ui->screen_label_11, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_color(ui->screen_label_11, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(ui->screen_label_11, &lv_font_SourceHanSerifSC_Regular_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->screen_label_11, &lv_font_SourceHanSerifSC_Regular_22, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_opa(ui->screen_label_11, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_letter_space(ui->screen_label_11, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_line_space(ui->screen_label_11, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -327,18 +327,18 @@ void setup_scr_screen(lv_ui *ui)
     ui->screen_label_12 = lv_label_create(ui->screen);
     lv_label_set_text(ui->screen_label_12, "东北风1级");
     lv_label_set_long_mode(ui->screen_label_12, LV_LABEL_LONG_WRAP);
-    lv_obj_set_pos(ui->screen_label_12, 275, 44);
-    lv_obj_set_size(ui->screen_label_12, 72, 17);
+    lv_obj_set_pos(ui->screen_label_12, 250, 36);
+    lv_obj_set_size(ui->screen_label_12, 99, 25);
 
     //Write style for screen_label_12, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
     lv_obj_set_style_border_width(ui->screen_label_12, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_radius(ui->screen_label_12, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_color(ui->screen_label_12, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(ui->screen_label_12, &lv_font_SourceHanSerifSC_Regular_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->screen_label_12, &lv_font_SourceHanSerifSC_Regular_22, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_opa(ui->screen_label_12, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_letter_space(ui->screen_label_12, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_line_space(ui->screen_label_12, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_align(ui->screen_label_12, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->screen_label_12, LV_TEXT_ALIGN_RIGHT, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_bg_opa(ui->screen_label_12, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_pad_top(ui->screen_label_12, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_pad_right(ui->screen_label_12, 0, LV_PART_MAIN|LV_STATE_DEFAULT);

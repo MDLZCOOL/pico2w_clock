@@ -60,9 +60,9 @@ extern lv_ui guider_ui;
 
 void setup_scr_screen(lv_ui *ui);
 
-LV_FONT_DECLARE(lv_font_FX_LED_120)
+LV_FONT_DECLARE(lv_font_FX_LED_140)
 LV_FONT_DECLARE(lv_font_montserratMedium_16)
-LV_FONT_DECLARE(lv_font_SourceHanSerifSC_Regular_16)
+LV_FONT_DECLARE(lv_font_SourceHanSerifSC_Regular_22)
 
 
 #ifdef __cplusplus

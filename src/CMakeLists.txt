@@ -13,8 +13,8 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
         ui/generated/gui_guider.c
         ui/generated/widgets_init.c
         ui/generated/setup_scr_screen.c
-        ui/generated/guider_fonts/lv_font_FX_LED_120.c
-        ui/generated/guider_fonts/lv_font_SourceHanSerifSC_Regular_16.c
+        ui/generated/guider_fonts/lv_font_FX_LED_140.c
+        ui/generated/guider_fonts/lv_font_SourceHanSerifSC_Regular_22.c
 )
 
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE

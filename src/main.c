@@ -40,6 +40,7 @@ bool rtc_timer_callback(struct repeating_timer *t) {
 
 bool ntp_sync_timer_callback(struct repeating_timer *t) {
     printf("12h has passed...\n");
+#if 0
     if (g_link_state == CYW43_LINK_UP) {
         ntp_status_t status = ntp_get_time(&g_time, 30000); // 30s timeout
         if (status == NTP_SUCCESS) {
@@ -56,6 +57,7 @@ bool ntp_sync_timer_callback(struct repeating_timer *t) {
             printf("NTP status: %d\n", status);
         }
     }
+#endif
     return true;
 }
 void bsp_st7306_draw_filled_rectangle(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1, uint16_t color) {
@@ -109,6 +111,7 @@ int main() {
             mktime(&g_time);
             lv_label_set_text_fmt(guider_ui.screen_label_1, "%02d", g_time.tm_hour);
             lv_label_set_text_fmt(guider_ui.screen_label_3, "%02d", g_time.tm_min);
+            lv_label_set_text_fmt(guider_ui.screen_label_4, "%d年%d月%d日 周%d", g_time.tm_year + 1900, g_time.tm_mon + 1, g_time.tm_mday, g_time.tm_wday);
         }
         lv_label_set_text_fmt(guider_ui.screen_label_8, "WiFi: %s", WIFI_SSID);
     }

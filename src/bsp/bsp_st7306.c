@@ -3,8 +3,11 @@
 #include <stdlib.h>
 #include "bsp_st7306.h"
 #include "pico/stdlib.h"
+
 #if BSP_ST7306_USE_DMA
+
 #include "hardware/dma.h"
+
 #endif
 
 uint8_t bsp_st7306_screen_buffer[BSP_ST7306_BUFFER_SIZE];
@@ -310,11 +313,13 @@ void bsp_st7306_update() {
 }
 
 #if BSP_ST7306_USE_DMA
+
 void bsp_st7306_wait_for_dma_finish() {
     dma_channel_wait_for_finish_blocking(st7306_dma_channel);
     while (spi_is_busy(spi_default));
     cs_deselect();
 }
+
 #endif
 
 void bsp_st7306_fill(uint16_t color) {

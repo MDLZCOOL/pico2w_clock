@@ -162,9 +162,14 @@ static void disp_flush(lv_disp_drv_t *disp_drv, const lv_area_t *area, lv_color_
         int32_t y;
         for (y = area->y1; y <= area->y2; y++) {
             for (x = area->x1; x <= area->x2; x++) {
-                uint16_t mono_color;
-                mono_color = lv_color_to1(*color_p) ? BSP_ST7306_COLOR_WHITE : BSP_ST7306_COLOR_BLACK;
-                bsp_st7306_drawpoint(BSP_ST7306_SCREEN_WIDTH - y, x, mono_color);
+                uint8_t gray_value = lv_color_to8(*color_p);
+                uint16_t final_color;
+                if (gray_value < 255) {
+                    final_color = BSP_ST7306_COLOR_BLACK;
+                } else {
+                    final_color = BSP_ST7306_COLOR_WHITE;
+                }
+                bsp_st7306_drawpoint(BSP_ST7306_SCREEN_WIDTH - y, x, final_color);
                 color_p++;
             }
         }
